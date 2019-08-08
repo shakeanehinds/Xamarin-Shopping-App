@@ -4,9 +4,10 @@
              x:Class="MarjamPrism.Views.MainPage"
              xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms">
 
-
+    
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical">
-        <SearchBar Placeholder="Search for Products here" Margin="20" SearchCommand="{Binding SearchCommand}" Text="{Binding SearchString}">
+        
+        <SearchBar Placeholder="Search for Products here" IsVisible="{Binding IsSearchVisible}" Margin="20" SearchCommand="{Binding SearchCommand}" Text="{Binding SearchString}">
             <SearchBar.Behaviors>
                 <b:EventToCommandBehavior EventName="TextChanged" Command="{Binding SearchCommand}"/>
             </SearchBar.Behaviors>
